@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+         
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button> <a class="navbar-brand" href="#">Orcus</a>
+        </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div> 
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button class="btn btn-warning" style="margin-top: 10px">Upload</button>
+          </li>
+          <li>
+            <a href="#!/login">Login</a>
+          </li>
+          <li>
+            <a href="#!/signup" style="margin-right: 10px;">Signup</a>
+          </li>
+        </ul>
+      </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Single toggle</h4>
+      <pre>{{singleModel}}</pre>
+      <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+          Single Toggle
+      </button>
+      <h4>Checkbox</h4>
+      <pre>Model: {{checkModel}}</pre>
+      <pre>Results: {{checkResults}}</pre>
+      <div class="btn-group">
+          <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
+          <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
+          <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
+      </div>
+      <h4>Radio &amp; Uncheckable Radio</h4>
+      <pre>{{radioModel || 'null'}}</pre>
+      <div class="btn-group">
+          <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Left</label>
+          <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Middle'">Middle</label>
+          <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Right</label>
+      </div>
+      <div class="btn-group">
+          <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
+          <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
+          <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
+      </div>
+      <div>
+          <button class="btn btn-default" ng-click="uncheckable = !uncheckable">
+              Toggle uncheckable
+          </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
